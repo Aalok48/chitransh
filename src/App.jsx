@@ -146,23 +146,13 @@ export default function ChitranshCreation() {
         transition: "background 0.3s, border 0.3s",
       }}>
         <div style={{ padding: isMobile ? "0 20px" : "0 48px", display: "flex", alignItems: "center", justifyContent: "space-between", height: isMobile ? 64 : 80 }}>
-
-          {/* Logo
-          <div style={{ display: "flex", alignItems: "center", gap: 10, cursor: "pointer" }} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-            <div style={{ width: 32, height: 32, background: T.accent, clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)", flexShrink: 0 }} />
-            <div style={{ lineHeight: 1.1 }}>
-              <div style={{ fontWeight: 800, fontSize: isMobile ? 15 : 17, color: scrolled ? T.navy : "#fff", letterSpacing: 1, transition: "color 0.3s" }}>CHITRANSH</div>
-              <div style={{ fontWeight: 400, fontSize: 9, color: T.accent, letterSpacing: 3 }}>CREATION</div>
-            </div>
-          </div> */}
-
           {/* Logo */}
           <div
             style={{ cursor: "pointer", display: "flex", alignItems: "center" }}
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             <img
-              src="/team/chitranshlogo.jpeg"
+              src="/logo/logowithoutbg.png"
               alt="Chitransh Creation Logo"
               style={{
                 height: isMobile ? 40 : 55,
