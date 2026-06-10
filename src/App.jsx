@@ -40,11 +40,18 @@ const PROJECTS = [
 ];
 
 const TEAM = [
-  { name: "Atul Karn", role: "Chief Executive Officer", image: "/team/atul.jpg", desc: "Sets the overall vision, strategy, and direction of Chitransh Creation. Leads organizational growth and represents the company in key partnerships." },
-  { name: "Bikal Bhandari", role: "Managing Director", image: "/team/bikalbhandari.jpg", desc: "Oversees day-to-day business operations, drives performance, and ensures projects, clients, and teams operate smoothly." },
-  { name: "CA Mohan Budhathoki", role: "Chief Financial Officer", image: "/team/mohan.jpeg", desc: "Oversees financial planning, budgeting, accounting, and compliance. Ensures financial stability and provides strategic insights." },
-  { name: "Jatin Gurung", role: "Chief Operations Officer", image: "/team/jatin.jpg", desc: "Manages internal operations, workflows, and project delivery. Focuses on improving efficiency and maintaining quality standards." },
-];
+  { name: "Atul Karn", role: "Chief Executive Officer", image: "/team/atulkarn.jpeg" },
+  { name: "Bikal Bhandari", role: "Managing Director", image: "/team/bikalbhandari.jpeg" },
+  { name: "CA Mohan Budhathoki", role: "Chief Financial Officer", image: "/team/mohan.jpeg" },
+  { name: "Jatin Gurung", role: "Chief Operations Officer", image: "/team/jatingurung.jpeg" },
+  { name: "Sakina Batt", role: "Creative Director", image: "/team/sakinabatt.jpeg" },
+  { name: "Ritu Karn", role: "Accountant", image: "/team/ritukarn.jpeg" },
+  { name: "Pradeep Thapa Magar", role: "Cinematographer", image: "/team/pradeepthapamagar.jpeg" },
+  { name: "Sagin Maharjan", role: "Visual Editor", image: "/team/pradeepthapamagar.jpeg" },
+  { name: "Sushant Kumar Lal", role: "Visual Editor", image: "/team/sushantkumarlal.jpeg" },
+  { name: "Dipesh Shrestha", role: "Graphic Designer", image: "/team/dipeshshrestha.jpeg" },
+  { name: "Matrika Subedi", role: "Consultant", image: "/team/dipeshshrestha.jpeg" },
+  ];
 
 const TAG_COLORS = {
   "IT Project": { bg: "#EAF3FB", text: "#1A5276" },
@@ -179,8 +186,8 @@ export default function ChitranshCreation() {
                 background: T.accent, color: "#fff", border: "none",
                 padding: "10px 22px", fontSize: 13, fontWeight: 600,
                 borderRadius: 6, cursor: "pointer", letterSpacing: 0.5,
-                boxShadow: `0 4px 14px rgba(232,86,58,0.3)`,
-              }}>Let's Talk</button>
+                boxShadow: `0 4px 14px #bb2b2b)`,
+              }}>Let's Connect</button>
             </div>
           )}
 
@@ -428,7 +435,6 @@ export default function ChitranshCreation() {
               <div style={{ padding: "24px" }}>
                 <h3 style={{ margin: "0 0 6px", fontSize: 18, fontWeight: 700, color: T.navy }}>{m.name}</h3>
                 <p style={{ color: T.accent, fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1, marginBottom: 14 }}>{m.role}</p>
-                <div style={{ width: 40, height: 3, background: T.accent, borderRadius: 2, marginBottom: 14 }} />
                 <p style={{ color: T.slate, fontSize: 13, lineHeight: 1.8, margin: 0 }}>{m.desc}</p>
               </div>
             </div>
