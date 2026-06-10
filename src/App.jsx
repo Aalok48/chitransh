@@ -33,8 +33,8 @@ const PROJECTS = [
   { client: "PaceX Sports", logo: "/clientlogo/pacexlogo.jpeg", sub: "Official IT Partner", type: "Web & IT Management", desc: "Chitransh Creation is the official IT partner of PaceX Sports — actively developing, maintaining, and managing their digital platform to power Nepal's growing sports community.", url: "https://pacexsports.com.np", tag: "IT Project", isIT: true },
   { client: "Agile Solution", logo: "/clientlogo/agilelogo.jpeg", sub: "Microsoft Partner in Nepal", type: "Event Coverage", desc: "Comprehensive video and photo coverage for AGIL Solution 2025 — capturing key moments, speaker highlights, and authentic interactions.", url: "https://www.linkedin.com/posts/agileerp_businesscentral-microsoftdynamics365-agilesolutions-activity-7318538156323000320-4721", tag: "Corporate" },
   { client: "Swaraj Tractor", logo: "/clientlogo/swarajlogo.jpeg", sub: "Customer Testimonials", type: "Testimonial Videos", desc: "Four authentic testimonial videos showcasing real customer experiences with Swaraj Tractor across Nepal in 2025.", url: "https://www.facebook.com/reel/1702587773974869", tag: "Brand Film" },
-  {client: "Shree Tarapunja English School",  logo: "/clientlogo/shreetarapunja.jpeg",  sub: "Educational Institution Showcase",  type: "School Promotional Video",  desc: "Produced a professional promotional video highlighting Shree Tarapunja English School's academic environment, student achievements, educational facilities, and commitment to quality learning.",  url: "https://www.facebook.com/reel/1702587773974869",  tag: "Corporate"},{ client: "Huawei Nepal", logo: "/clientlogo/huaweilogo.jpeg", sub: "Digital Education", type: "Documentary", desc: "A refined video documentary elegantly showcasing the impact and transformative benefits of digital education.", url: "https://blog.huawei.com/admin/asset/v1/pro/view/4-fa85a68997442309c8e10d3f975268d.mp4", tag: "Documentary" },
-  {client: "Delight Hospitality",  logo: "/clientlogo/delighthospitality.jpeg",  sub: "Hotel & Hospitality Promotion",  type: "Promotional Video",  desc: "Created a visually engaging promotional video highlighting Delight Hospitality's accommodations, services, and customer-centric approach, helping strengthen its brand presence and market reach.",  url: "https://www.youtube.com/watch?v=1SlTFpduQ1s",  tag: "Brand Film"},
+  { client: "Shree Tarapunja English School", logo: "/clientlogo/shreetarapunja.jpeg", sub: "Educational Institution Showcase", type: "School Promotional Video", desc: "Produced a professional promotional video highlighting Shree Tarapunja English School's academic environment, student achievements, educational facilities, and commitment to quality learning.", url: "https://www.facebook.com/reel/1702587773974869", tag: "Corporate" }, { client: "Huawei Nepal", logo: "/clientlogo/huaweilogo.jpeg", sub: "Digital Education", type: "Documentary", desc: "A refined video documentary elegantly showcasing the impact and transformative benefits of digital education.", url: "https://blog.huawei.com/admin/asset/v1/pro/view/4-fa85a68997442309c8e10d3f975268d.mp4", tag: "Documentary" },
+  { client: "Delight Hospitality", logo: "/clientlogo/delighthospitality.jpeg", sub: "Hotel & Hospitality Promotion", type: "Promotional Video", desc: "Created a visually engaging promotional video highlighting Delight Hospitality's accommodations, services, and customer-centric approach, helping strengthen its brand presence and market reach.", url: "https://www.youtube.com/watch?v=1SlTFpduQ1s", tag: "Brand Film" },
   { client: "Model Multiple College", logo: "/clientlogo/modellogo.jpeg", sub: "Janakpur", type: "Audio Production", desc: "Produced an audiobook titled \"Khushi\" — the inspiring biography of Birendra Sah Sir, brought to life through expressive narration.", url: "https://www.youtube.com/watch?v=2lL8m98hjvk", tag: "Audiobook" },
   { client: "\"Khushi\" Short Movie", logo: "/clientlogo/khushilogo.jpeg", sub: "NIFF 2025 Selection", type: "Narrative Film", desc: "Produced the acclaimed short film \"Khushi,\" directed by Pradhumna Mishra and officially selected for NIFF 2025.", url: "https://youtu.be/ZDD5_Pw-Fn4", tag: "Narrative Film" },
 ];
@@ -52,7 +52,7 @@ const TEAM = [
   { name: "Sushant Kumar Lal", role: "Visual Editor", image: "/team/sushantkumarlal.jpeg" },
   { name: "Dipesh Shrestha", role: "Graphic Designer", image: "/team/dipeshshrestha.jpeg" },
   { name: "Matrika Subedi", role: "Consultant", image: "/team/dipeshshrestha.jpeg" },
-  ];
+];
 
 const TAG_COLORS = {
   "IT Project": { bg: "#EAF3FB", text: "#1A5276" },
@@ -240,12 +240,13 @@ export default function ChitranshCreation() {
             <span style={{ width: 7, height: 7, borderRadius: "50%", background: T.accent, display: "inline-block" }} />
             <span style={{ color: "rgba(255,255,255,0.75)", fontSize: 12, letterSpacing: 2 }}>Est. 2023 · Kathmandu, Nepal</span>
           </div>
-          <h1 style={{ color: "#fff", fontSize: isMobile ? 44 : isTablet ? 68 : 92, fontWeight: 900, lineHeight: 1.0, marginBottom: 14, letterSpacing: -2 }}>
-            CHITRANSH<br /><span style={{ color: T.accent }}>CREATION</span>
+          <h1 style={{ color: "#bb2b2b", fontSize: isMobile ? 44 : isTablet ? 68 : 90, fontWeight: 900, lineHeight: 1.0, marginBottom: 14, letterSpacing: -2,}}>
+            Fuelling Brands <br />
+            <span style={{ color: "#fff" }}>Through Film</span>
           </h1>
-          <p style={{ color: "rgba(255,255,255,0.45)", fontSize: isMobile ? 11 : 13, letterSpacing: 5, textTransform: "uppercase", marginBottom: 28 }}>
+          {/* <p style={{ color: "rgba(255,255,255,0.45)", fontSize: isMobile ? 11 : 13, letterSpacing: 5, textTransform: "uppercase", marginBottom: 28 }}>
             Fuelling Brands Through Film
-          </p>
+          </p> */}
           <p style={{ color: "rgba(255,255,255,0.65)", fontSize: isMobile ? 15 : 18, maxWidth: 560, margin: "0 auto 44px", lineHeight: 1.75, fontWeight: 300 }}>
             We transform ideas into compelling audio-visual experiences that inspire, connect, and elevate brands — with storytelling at the heart of everything we do.
           </p>
@@ -347,7 +348,7 @@ export default function ChitranshCreation() {
               )}
               <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 18 }}>
                 <div style={{ width: 52, height: 52, background: T.accentSoft, borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 26 }}>{s.icon}</div>
-                
+
                 <h3 style={{ fontSize: 18, fontWeight: 700, color: T.navy, margin: 0 }}>{s.title}</h3>
               </div>
               <div style={{ width: 36, height: 3, background: T.accent, borderRadius: 2, marginBottom: 16 }} />
@@ -370,7 +371,7 @@ export default function ChitranshCreation() {
           ))}
         </div>
       </section>
-      
+
       <section ref={el => sectionsRef.current["Projects"] = el} style={{ padding: sp, background: T.bg, width: "100%", boxSizing: "border-box" }}>
         <div style={{ textAlign: "center", marginBottom: isMobile ? 40 : 60 }}>
           <p style={{ color: T.accent, fontSize: 11, letterSpacing: 5, fontWeight: 700, textTransform: "uppercase", marginBottom: 12 }}>Portfolio</p>
@@ -386,7 +387,7 @@ export default function ChitranshCreation() {
               boxShadow: "0 2px 12px rgba(30,42,58,0.05)", transition: "transform 0.2s, box-shadow 0.2s",
             }}
               onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.boxShadow = "0 12px 32px rgba(30,42,58,0.12)"; }}
-              onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)";  e.currentTarget.style.boxShadow = "0 2px 12px rgba(30,42,58,0.05)"; }}
+              onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 2px 12px rgba(30,42,58,0.05)"; }}
             >
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 14, gap: 8, flexWrap: "wrap" }}>
                 <span style={{ fontSize: 11, fontWeight: 600, letterSpacing: 0.5, padding: "4px 12px", borderRadius: 20, background: TAG_COLORS[p.tag]?.bg || "#f0f0f0", color: TAG_COLORS[p.tag]?.text || "#555" }}>{p.tag}</span>
@@ -506,7 +507,7 @@ export default function ChitranshCreation() {
                 </div>
               </div>
 
-    
+
 
               {/* Address */}
               <div style={{ display: "flex", alignItems: "flex-start", gap: 14, marginTop: 14 }}>
