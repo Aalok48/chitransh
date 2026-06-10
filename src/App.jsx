@@ -41,7 +41,7 @@ const PROJECTS = [
 
 const TEAM = [
   { name: "Atul Karn", role: "Chief Executive Officer", image: "/team/atulkarn.jpeg" },
-  { name: "Alok Karn", role: "Computer Engineer", image: "/team/atulkarn.jpeg" },
+  { name: "Alok Karn", role: "IT chief", image: "/team/alokkarn.jpeg" },
   { name: "Bikal Bhandari", role: "Managing Director", image: "/team/bikalbhandari.jpeg" },
   { name: "CA Mohan Budhathoki", role: "Chief Financial Officer", image: "/team/mohan.jpeg" },
   { name: "Jatin Gurung", role: "Chief Operations Officer", image: "/team/jatingurung.jpeg" },
