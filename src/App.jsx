@@ -162,7 +162,7 @@ export default function ChitranshCreation() {
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             <img
-              src="/team/logo.jpeg"
+              src="/team/chitranshlogo.jpeg"
               alt="Chitransh Creation Logo"
               style={{
                 height: isMobile ? 40 : 55,
