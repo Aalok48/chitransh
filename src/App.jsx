@@ -461,9 +461,8 @@ export default function ChitranshCreation() {
               <div style={{ display: "flex", alignItems: "flex-start", gap: 14 }}>
                 <div style={{ width: 40, height: 40, background: "rgba(232,86,58,0.15)", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18, flexShrink: 0 }}>📞</div>
                 <div>
-                  <p style={{ color: "rgba(255,255,255,0.35)", fontSize: 10, letterSpacing: 2, textTransform: "uppercase", marginBottom: 6 }}>Phone</p>
                   <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-                    {[{ display: "+977-9861330778", number: "9779861330778" }, { display: "+977-9815888017", number: "9779815888017" }].map(ph => (
+                    {[{ display: "+977-9861330778", number: "9779861330778" }].map(ph => (
                       <a key={ph.number} href={`https://wa.me/${ph.number}`} target="_blank" rel="noopener noreferrer"
                         style={{ color: "rgba(255,255,255,0.8)", fontSize: 14, textDecoration: "none", display: "flex", alignItems: "center", gap: 8, transition: "color 0.2s" }}
                         onMouseEnter={e => e.currentTarget.style.color = T.green}
@@ -481,7 +480,6 @@ export default function ChitranshCreation() {
               <div style={{ display: "flex", alignItems: "flex-start", gap: 14, marginTop: 14 }}>
                 <div style={{ width: 40, height: 40, background: "rgba(232,86,58,0.15)", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18, flexShrink: 0 }}>✉️</div>
                 <div>
-                  <p style={{ color: "rgba(255,255,255,0.35)", fontSize: 10, letterSpacing: 2, textTransform: "uppercase", marginBottom: 6 }}>Email</p>
                   <a href="mailto:creationchitransh8@gmail.com" style={{ color: "rgba(255,255,255,0.8)", fontSize: 14, textDecoration: "none", transition: "color 0.2s" }}
                     onMouseEnter={e => e.currentTarget.style.color = T.accent}
                     onMouseLeave={e => e.currentTarget.style.color = "rgba(255,255,255,0.8)"}
@@ -489,23 +487,12 @@ export default function ChitranshCreation() {
                 </div>
               </div>
 
-              {/* Website */}
-              <div style={{ display: "flex", alignItems: "flex-start", gap: 14, marginTop: 14 }}>
-                <div style={{ width: 40, height: 40, background: "rgba(232,86,58,0.15)", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18, flexShrink: 0 }}>🌐</div>
-                <div>
-                  <p style={{ color: "rgba(255,255,255,0.35)", fontSize: 10, letterSpacing: 2, textTransform: "uppercase", marginBottom: 6 }}>Website</p>
-                  <a href="https://www.chitranshcreation.com.np/" target="_blank" rel="noopener noreferrer" style={{ color: "rgba(255,255,255,0.8)", fontSize: 14, textDecoration: "none", transition: "color 0.2s" }}
-                    onMouseEnter={e => e.currentTarget.style.color = T.accent}
-                    onMouseLeave={e => e.currentTarget.style.color = "rgba(255,255,255,0.8)"}
-                  >chitranshcreation.com.np ↗</a>
-                </div>
-              </div>
+    
 
               {/* Address */}
               <div style={{ display: "flex", alignItems: "flex-start", gap: 14, marginTop: 14 }}>
                 <div style={{ width: 40, height: 40, background: "rgba(232,86,58,0.15)", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18, flexShrink: 0 }}>📍</div>
                 <div>
-                  <p style={{ color: "rgba(255,255,255,0.35)", fontSize: 10, letterSpacing: 2, textTransform: "uppercase", marginBottom: 6 }}>Address</p>
                   <a href="https://maps.google.com/maps/search/Chandragiri%20Marga%2C%20Old%20Baneshwor%2C%2044600%20Kathmandu%2C%20Nepal/@28.7045,80.5663,17z?hl=en" target="_blank" rel="noopener noreferrer" style={{ color: "rgba(255,255,255,0.8)", fontSize: 14, textDecoration: "none", lineHeight: 1.7, transition: "color 0.2s" }}
                     onMouseEnter={e => e.currentTarget.style.color = T.accent}
                     onMouseLeave={e => e.currentTarget.style.color = "rgba(255,255,255,0.8)"}
