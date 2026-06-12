@@ -228,12 +228,31 @@ export default function ChitranshCreation() {
         textAlign: "center", padding: isMobile ? "90px 24px 60px" : "100px 64px 80px",
         position: "relative", overflow: "hidden", boxSizing: "border-box",
       }}>
+        {/* Background video */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            zIndex: 0,
+            opacity: 0.3,
+          }}
+        >
+          <source src="/video/backgroundvideo.mp4" type="video/mp4" />
+        </video>
         {/* Glow orbs */}
-        <div style={{ position: "absolute", top: "-10%", right: "-5%", width: isMobile ? 280 : 500, height: isMobile ? 280 : 500, borderRadius: "50%", background: "radial-gradient(circle, rgba(232,86,58,0.18) 0%, transparent 70%)", pointerEvents: "none" }} />
-        <div style={{ position: "absolute", bottom: "-15%", left: "-8%", width: isMobile ? 240 : 420, height: isMobile ? 240 : 420, borderRadius: "50%", background: "radial-gradient(circle, rgba(74,158,221,0.12) 0%, transparent 70%)", pointerEvents: "none" }} />
+        <div style={{ position: "absolute", top: "-10%", right: "-5%", width: isMobile ? 280 : 500, height: isMobile ? 280 : 500, borderRadius: "50%", background: "radial-gradient(circle, rgba(232,86,58,0.18) 0%, transparent 70%)", pointerEvents: "none", zIndex: 1 }} />
+        <div style={{ position: "absolute", bottom: "-15%", left: "-8%", width: isMobile ? 240 : 420, height: isMobile ? 240 : 420, borderRadius: "50%", background: "radial-gradient(circle, rgba(74,158,221,0.12) 0%, transparent 70%)", pointerEvents: "none", zIndex: 1 }} />
         {/* Diagonal accents */}
-        <div style={{ position: "absolute", top: 0, right: 0, width: isMobile ? "40%" : "28%", height: isMobile ? "28%" : "38%", background: `linear-gradient(135deg, ${T.accent} 0%, #C44A30 100%)`, clipPath: "polygon(100% 0, 100% 100%, 0 0)", opacity: 0.7, pointerEvents: "none" }} />
-        <div style={{ position: "absolute", bottom: 0, left: 0, width: isMobile ? "22%" : "15%", height: isMobile ? "14%" : "20%", background: T.accent, clipPath: "polygon(0 100%, 100% 100%, 0 0)", opacity: 0.4, pointerEvents: "none" }} />
+        <div style={{ position: "absolute", top: 0, right: 0, width: isMobile ? "40%" : "28%", height: isMobile ? "28%" : "38%", background: `linear-gradient(135deg, ${T.accent} 0%, #C44A30 100%)`, clipPath: "polygon(100% 0, 100% 100%, 0 0)", opacity: 0.7, pointerEvents: "none", zIndex: 1 }} />
+        <div style={{ position: "absolute", bottom: 0, left: 0, width: isMobile ? "22%" : "15%", height: isMobile ? "14%" : "20%", background: T.accent, clipPath: "polygon(0 100%, 100% 100%, 0 0)", opacity: 0.4, pointerEvents: "none", zIndex: 1 }} />
 
         <div style={{ position: "relative", zIndex: 2, maxWidth: 760, width: "100%" }}>
           <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(232,86,58,0.15)", border: "1px solid rgba(232,86,58,0.3)", borderRadius: 20, padding: "6px 18px", marginBottom: 28 }}>
