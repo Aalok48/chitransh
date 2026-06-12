@@ -79,6 +79,7 @@ export default function ChitranshCreation() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const sectionsRef = useRef({});
+  const videoRef = useRef(null);
 
   const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
   const [formStatus, setFormStatus] = useState("idle");
@@ -134,6 +135,12 @@ export default function ChitranshCreation() {
   }, []);
 
   useEffect(() => { if (isDesktop) setMenuOpen(false); }, [isDesktop]);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(() => {});
+    }
+  }, []);
 
   const scrollTo = (id) => {
     sectionsRef.current[id]?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -230,10 +237,12 @@ export default function ChitranshCreation() {
       }}>
         {/* Background video */}
         <video
+          ref={videoRef}
           autoPlay
           muted
           loop
           playsInline
+          preload="auto"
           style={{
             position: "absolute",
             top: 0,
