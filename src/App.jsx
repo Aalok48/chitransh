@@ -1,4 +1,9 @@
 import { useState, useEffect, useRef } from "react";
+import * as clientlogo from "./assets/clientlogo";
+import * as icon from "./assets/icons";
+import * as team from "./assets/team";
+import * as logo from "./assets/logo";
+import * as video from "./assets/video";
 
 // ── THEME ─────────────────────────────────────────────────────────────────
 const T = {
@@ -30,28 +35,30 @@ const SERVICES = [
 ];
 
 const PROJECTS = [
-  { client: "PaceX Sports", logo: "/clientlogo/pacexlogo.jpeg", sub: "Official IT Partner", type: "Web & IT Management", desc: "Chitransh Creation is the official IT partner of PaceX Sports — actively developing, maintaining, and managing their digital platform to power Nepal's growing sports community.", url: "https://pacexsports.com.np", tag: "IT Project", isIT: true },
-  { client: "Agile Solution", logo: "/clientlogo/agilelogo.jpeg", sub: "Microsoft Partner in Nepal", type: "Event Coverage", desc: "Comprehensive video and photo coverage for AGIL Solution 2025 — capturing key moments, speaker highlights, and authentic interactions.", url: "https://www.linkedin.com/posts/agileerp_businesscentral-microsoftdynamics365-agilesolutions-activity-7318538156323000320-4721", tag: "Corporate" },
-  { client: "Swaraj Tractor", logo: "/clientlogo/swarajlogo.jpeg", sub: "Customer Testimonials", type: "Testimonial Videos", desc: "Four authentic testimonial videos showcasing real customer experiences with Swaraj Tractor across Nepal in 2025.", url: "https://www.facebook.com/reel/1702587773974869", tag: "Brand Film" },
-  { client: "Shree Tarapunja English School", logo: "/clientlogo/shreetarapunja.jpeg", sub: "Educational Institution Showcase", type: "School Promotional Video", desc: "Produced a professional promotional video highlighting Shree Tarapunja English School's academic environment, student achievements, educational facilities, and commitment to quality learning.", url: "https://www.facebook.com/reel/1702587773974869", tag: "Corporate" }, { client: "Huawei Nepal", logo: "/clientlogo/huaweilogo.jpeg", sub: "Digital Education", type: "Documentary", desc: "A refined video documentary elegantly showcasing the impact and transformative benefits of digital education.", url: "https://blog.huawei.com/admin/asset/v1/pro/view/4-fa85a68997442309c8e10d3f975268d.mp4", tag: "Documentary" },
-  { client: "Delight Hospitality", logo: "/clientlogo/delighthospitality.jpeg", sub: "Hotel & Hospitality Promotion", type: "Promotional Video", desc: "Created a visually engaging promotional video highlighting Delight Hospitality's accommodations, services, and customer-centric approach, helping strengthen its brand presence and market reach.", url: "https://www.youtube.com/watch?v=1SlTFpduQ1s", tag: "Brand Film" },
-  { client: "Model Multiple College", logo: "/clientlogo/modellogo.jpeg", sub: "Janakpur", type: "Audio Production", desc: "Produced an audiobook titled \"Khushi\" — the inspiring biography of Birendra Sah Sir, brought to life through expressive narration.", url: "https://www.youtube.com/watch?v=2lL8m98hjvk", tag: "Audiobook" },
-  { client: "\"Khushi\" Short Movie", logo: "/clientlogo/khushilogo.jpeg", sub: "NIFF 2025 Selection", type: "Narrative Film", desc: "Produced the acclaimed short film \"Khushi,\" directed by Pradhumna Mishra and officially selected for NIFF 2025.", url: "https://youtu.be/ZDD5_Pw-Fn4", tag: "Narrative Film" },
+  { client: "PaceX Sports", logo: clientlogo.pacex, sub: "Official IT Partner", type: "Web & IT Management", desc: "Chitransh Creation is the official IT partner of PaceX Sports — actively developing, maintaining, and managing their digital platform to power Nepal's growing sports community.", url: "https://pacexsports.com.np", tag: "IT Project", isIT: true },
+  { client: "Agile Solution", logo: clientlogo.agile, sub: "Microsoft Partner in Nepal", type: "Event Coverage", desc: "Comprehensive video and photo coverage for AGIL Solution 2025 — capturing key moments, speaker highlights, and authentic interactions.", url: "https://www.linkedin.com/posts/agileerp_businesscentral-microsoftdynamics365-agilesolutions-activity-7318538156323000320-4721", tag: "Corporate" },
+  { client: "Swaraj Tractor", logo: clientlogo.swaraj, sub: "Customer Testimonials", type: "Testimonial Videos", desc: "Four authentic testimonial videos showcasing real customer experiences with Swaraj Tractor across Nepal in 2025.", url: "https://www.facebook.com/reel/1702587773974869", tag: "Brand Film" },
+  { client: "Delight Hospitality", logo: clientlogo.delight, sub: "Hotel & Hospitality Promotion", type: "Promotional Video", desc: "Created a visually engaging promotional video highlighting Delight Hospitality's accommodations, services, and customer-centric approach, helping strengthen its brand presence and market reach.", url: "https://delightshospitality.com", tag: "Brand Film" },
+  { client: "Shree Tarapunja English School", logo: clientlogo.shreetarapunja, sub: "Educational Institution Showcase", type: "School Promotional Video", desc: "Produced a professional promotional video highlighting Shree Tarapunja English School's academic environment, student achievements, educational facilities, and commitment to quality learning.", url: "https://www.facebook.com/share/v/1H8d4zcrC7/", tag: "Corporate" }, 
+  { client: "Huawei Nepal", logo: clientlogo.huawei, sub: "Digital Education", type: "Documentary", desc: "A refined video documentary elegantly showcasing the impact and transformative benefits of digital education.", url: "https://blog.huawei.com/en/post/2025/2/10/tech4good-huawei-nepal-digital-education", tag: "Documentary" },
+  { client: "Model Multiple College", logo: clientlogo.model, sub: "Janakpur", type: "Audio Production", desc: "Produced an audiobook titled \"Khushi\" — the inspiring biography of Birendra Sah Sir, brought to life through expressive narration.", url: "https://www.youtube.com/watch?v=2lL8m98hjvk", tag: "Audiobook" },
+  { client: "\"Khushi\" Short Movie", logo: clientlogo.khushi, sub: "NIFF 2025 Selection", type: "Narrative Film", desc: "Produced the acclaimed short film \"Khushi,\" directed by Pradhumna Mishra and officially selected for NIFF 2025.", url: "https://youtu.be/ZDD5_Pw-Fn4", tag: "Narrative Film" },
 ];
 
 const TEAM = [
-  { name: "Atul Karn", role: "Chief Executive Officer", image: "/team/atulkarn.jpeg" },
-  { name: "Alok Karn", role: "IT chief", image: "/team/alokkarn.jpeg" },
-  { name: "Bikal Bhandari", role: "Managing Director", image: "/team/bikalbhandari.jpeg" },
-  { name: "CA Mohan Budhathoki", role: "Chief Financial Officer", image: "/team/mohan.jpeg" },
-  { name: "Jatin Gurung", role: "Chief Operations Officer", image: "/team/jatingurung.jpeg" },
-  { name: "Sakina Batt", role: "Creative Director", image: "/team/sakinabatt.jpeg" },
-  { name: "Ritu Karn", role: "Accountant", image: "/team/ritukarn.jpeg" },
-  { name: "Pradeep Thapa Magar", role: "Cinematographer", image: "/team/pradeepthapamagar.jpeg" },
-  { name: "Sagin Maharjan", role: "Visual Editor", image: "/team/pradeepthapamagar.jpeg" },
-  { name: "Sushant Kumar Lal", role: "Visual Editor", image: "/team/sushantkumarlal.jpeg" },
-  { name: "Dipesh Shrestha", role: "Graphic Designer", image: "/team/dipeshshrestha.jpeg" },
-  { name: "Matrika Subedi", role: "Consultant", image: "/team/dipeshshrestha.jpeg" },
+  { name: "Atul Karn", role: "Chief Executive Officer", image: team.atul },
+  { name: "Alok Karn", role: "IT chief", image: team.alok },
+  { name: "Bikal Bhandari", role: "Managing Director", image: team.bikal },
+  { name: "CA Mohan Budhathoki", role: "Chief Financial Officer", image: team.mohan },
+  { name: "Jatin Gurung", role: "Chief Operations Officer", image: team.jatin },
+  { name: "Sakina Batt", role: "Creative Director", image: team.sakina },
+  { name: "Ritu Karn", role: "Accountant", image: team.ritu },
+  { name: "Pradeep Thapa Magar", role: "Cinematographer", image: team.pradeep },
+  { name: "Sagin Maharjan", role: "Visual Editor", image: team.sagin },
+  { name: "Sushant Kumar Lal", role: "Visual Editor", image: team.sushant },
+  { name: "Dipesh Shrestha", role: "Graphic Designer", image: team.dipesh },
+  { name: "Matrika Subedi", role: "Consultant", image: team.matrika },
+  { name: "Srabina Dhungana", role: "Content Creator", image: team.srabina },
 ];
 
 const TAG_COLORS = {
@@ -167,7 +174,7 @@ export default function ChitranshCreation() {
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             <img
-              src="/logo/logowithoutbg.png"
+              src={logo.companylogo}
               alt="Chitransh Creation Logo"
               style={{
                 height: isMobile ? 40 : 55,
@@ -243,7 +250,7 @@ export default function ChitranshCreation() {
           loop
           playsInline
           preload="auto"
-          poster="/video/videoposter.jpg"
+          poster= {video.videoposter}
           style={{
             position: "absolute",
             top: 0,
@@ -255,14 +262,14 @@ export default function ChitranshCreation() {
             opacity: 0.3,
           }}
         >
-          <source src="/video/backgroundvideo.mp4" type="video/mp4" />
+          <source src={video.backgroundvideo} type="video/mp4" />
         </video>
         {/* Glow orbs */}
         <div style={{ position: "absolute", top: "-10%", right: "-5%", width: isMobile ? 280 : 500, height: isMobile ? 280 : 500, borderRadius: "50%", background: "radial-gradient(circle, rgba(232,86,58,0.18) 0%, transparent 70%)", pointerEvents: "none", zIndex: 1 }} />
         <div style={{ position: "absolute", bottom: "-15%", left: "-8%", width: isMobile ? 240 : 420, height: isMobile ? 240 : 420, borderRadius: "50%", background: "radial-gradient(circle, rgba(74,158,221,0.12) 0%, transparent 70%)", pointerEvents: "none", zIndex: 1 }} />
         {/* Diagonal accents */}
-        <div style={{ position: "absolute", top: 0, right: 0, width: isMobile ? "40%" : "28%", height: isMobile ? "28%" : "38%", background: `linear-gradient(135deg, ${T.accent} 0%, #C44A30 100%)`, clipPath: "polygon(100% 0, 100% 100%, 0 0)", opacity: 0.7, pointerEvents: "none", zIndex: 1 }} />
-        <div style={{ position: "absolute", bottom: 0, left: 0, width: isMobile ? "22%" : "15%", height: isMobile ? "14%" : "20%", background: T.accent, clipPath: "polygon(0 100%, 100% 100%, 0 0)", opacity: 0.4, pointerEvents: "none", zIndex: 1 }} />
+        <div style={{ position: "absolute", top: 0, right: 0, width: isMobile ? "40%" : "28%", height: isMobile ? "28%" : "38%", background: "#bb2b2b", clipPath: "polygon(100% 0, 100% 100%, 0 0)", opacity: 0.7, pointerEvents: "none", zIndex: 1 }} />
+        <div style={{ position: "absolute", bottom: 0, left: 0, width: isMobile ? "22%" : "15%", height: isMobile ? "14%" : "20%", background: "#bb2b2b", clipPath: "polygon(0 100%, 100% 100%, 0 0)", opacity: 0.4, pointerEvents: "none", zIndex: 1 }} />
 
         <div style={{ position: "relative", zIndex: 2, maxWidth: 760, width: "100%" }}>
           <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(232,86,58,0.15)", border: "1px solid rgba(232,86,58,0.3)", borderRadius: 20, padding: "6px 18px", marginBottom: 28 }}>
@@ -508,7 +515,9 @@ export default function ChitranshCreation() {
             <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
               {/* Phone */}
               <div style={{ display: "flex", alignItems: "flex-start", gap: 14 }}>
-                <div style={{ width: 40, height: 40, background: "rgba(232,86,58,0.15)", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18, flexShrink: 0 }}>📞</div>
+                <div style={{ width: 40, height: 40, background: "rgba(232,86,58,0.15)", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <img src= {icon.phone} alt="Phone" style={{ width: 20, height: 20, objectFit: "contain" }} />
+                </div>
                 <div>
                   <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
                     {[{ display: "+977-9861330778", number: "9779861330778" }].map(ph => (
@@ -527,7 +536,9 @@ export default function ChitranshCreation() {
 
               {/* Email */}
               <div style={{ display: "flex", alignItems: "flex-start", gap: 14, marginTop: 14 }}>
-                <div style={{ width: 40, height: 40, background: "rgba(232,86,58,0.15)", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18, flexShrink: 0 }}>✉️</div>
+                <div style={{ width: 40, height: 40, background: "rgba(232,86,58,0.15)", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <img src= {icon.email} alt="Email" style={{ width: 20, height: 20, objectFit: "contain" }} />
+                </div>
                 <div>
                   <a href="mailto:creationchitransh8@gmail.com" style={{ color: "rgba(255,255,255,0.8)", fontSize: 14, textDecoration: "none", transition: "color 0.2s" }}
                     onMouseEnter={e => e.currentTarget.style.color = T.accent}
@@ -536,13 +547,13 @@ export default function ChitranshCreation() {
                 </div>
               </div>
 
-
-
               {/* Address */}
               <div style={{ display: "flex", alignItems: "flex-start", gap: 14, marginTop: 14 }}>
-                <div style={{ width: 40, height: 40, background: "rgba(232,86,58,0.15)", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18, flexShrink: 0 }}>📍</div>
+                <div style={{ width: 40, height: 40, background: "rgba(232,86,58,0.15)", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <img src= {icon.location} alt="Location" style={{ width: 20, height: 20, objectFit: "contain" }} />
+                </div>
                 <div>
-                  <a href="https://maps.google.com/maps/search/Chandragiri%20Marga%2C%20Old%20Baneshwor%2C%2044600%20Kathmandu%2C%20Nepal/@28.7045,80.5663,17z?hl=en" target="_blank" rel="noopener noreferrer" style={{ color: "rgba(255,255,255,0.8)", fontSize: 14, textDecoration: "none", lineHeight: 1.7, transition: "color 0.2s" }}
+                  <a href="https://www.google.com/maps/search/27.69973650865905,85.3450369427827" target="_blank" rel="noopener noreferrer" style={{ color: "rgba(255,255,255,0.8)", fontSize: 14, textDecoration: "none", lineHeight: 1.7, transition: "color 0.2s" }}
                     onMouseEnter={e => e.currentTarget.style.color = T.accent}
                     onMouseLeave={e => e.currentTarget.style.color = "rgba(255,255,255,0.8)"}
                   >Chandragiri Marg, Baneshwor,<br />Kathmandu, Nepal ↗</a>
@@ -594,13 +605,23 @@ export default function ChitranshCreation() {
       </section>
 
       {/* ══ FOOTER ═══════════════════════════════════════════════════════════ */}
-      <footer style={{ background: "#131D28", padding: isMobile ? "24px 24px" : "28px 64px", borderTop: "1px solid rgba(255,255,255,0.06)", width: "100%", boxSizing: "border-box" }}>
+      <footer style={{ background: "#F9F7F4", padding: isMobile ? "24px 24px" : "28px 64px", borderTop: "1px solid rgba(30,42,58,0.08)", width: "100%", boxSizing: "border-box" }}>
         <div style={{ display: "flex", flexDirection: isMobile ? "column" : "row", justifyContent: "space-between", alignItems: isMobile ? "flex-start" : "center", gap: isMobile ? 10 : 0 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-            <div style={{ width: 18, height: 18, background: T.accent, clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)", flexShrink: 0 }} />
-            <span style={{ color: "rgba(255,255,255,0.4)", fontSize: isMobile ? 11 : 13 }}>Chitransh Creation Pvt. Ltd. · Reg. No. 321002/080/081</span>
+            <img
+              src={logo.companylogo}
+              alt="Chitransh Creation Logo"
+              style={{
+                height: isMobile ? 24 : 28,
+                width: "auto",
+                objectFit: "contain",
+                display: "block",
+                flexShrink: 0,
+              }}
+            />
+            <span style={{ color: "#8A97A8", fontSize: isMobile ? 11 : 13 }}>Chitransh Creation Pvt. Ltd. · Reg. No. 321002/080/081</span>
           </div>
-          <span style={{ color: "rgba(255,255,255,0.22)", fontSize: 12 }}>© 2025 Chitransh Creation. All rights reserved.</span>
+          <span style={{ color: "#A0ADB8", fontSize: 12 }}>© 2025 Chitransh Creation. All rights reserved.</span>
         </div>
       </footer>
 

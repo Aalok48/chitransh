@@ -1,0 +1,13 @@
+export { default as alok } from './alokkarn.jpeg';
+export { default as atul } from './atulkarn.jpeg';
+export { default as bikal } from './bikalbhandari.jpeg';
+export { default as dipesh } from './dipeshshrestha.jpeg';
+export { default as jatin } from './jatingurung.jpeg';
+export { default as matrika } from './matrikasubedi.jpeg';
+export { default as mohan } from './mohan.jpeg';
+export { default as pradeep } from './pradeepthapamagar.jpeg';
+export { default as ritu } from './ritukarn.jpeg';
+export { default as sagin } from './saginmaharjan.jpeg';
+export { default as sakina } from './sakinabatt.jpeg';
+export { default as sushant } from './sushantkumarlal.jpeg';
+export { default as srabina } from './srabinadhungana.jpeg';
