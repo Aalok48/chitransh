@@ -537,7 +537,7 @@ export default function ChitranshCreation() {
               {/* Email */}
               <div style={{ display: "flex", alignItems: "flex-start", gap: 14, marginTop: 14 }}>
                 <div style={{ width: 40, height: 40, background: "rgba(232,86,58,0.15)", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                  <img src= {icon.email} alt="Email" style={{ width: 20, height: 20, objectFit: "contain" }} />
+                  <img src= {icon.mail} alt="Email" style={{ width: 20, height: 20, objectFit: "contain" }} />
                 </div>
                 <div>
                   <a href="mailto:creationchitransh8@gmail.com" style={{ color: "rgba(255,255,255,0.8)", fontSize: 14, textDecoration: "none", transition: "color 0.2s" }}
