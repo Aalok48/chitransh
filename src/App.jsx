@@ -243,6 +243,7 @@ export default function ChitranshCreation() {
           loop
           playsInline
           preload="auto"
+          poster="/video/videoposter.jpg"
           style={{
             position: "absolute",
             top: 0,
