@@ -483,7 +483,7 @@ export default function ChitranshCreation() {
             >
               <div style={{ height: isMobile ? 240 : 300, overflow: "hidden" }}>
                 <img src={m.image} alt={`${m.name} - ${m.role}`} loading="lazy"
-                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform 0.4s" }}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 25%", display: "block", transition: "transform 0.4s" }}
                   onMouseEnter={e => e.currentTarget.style.transform = "scale(1.04)"}
                   onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
                 />
