@@ -7,7 +7,7 @@ import * as video from "./assets/video";
 
 // ── THEME ─────────────────────────────────────────────────────────────────
 const T = {
-  accent: "#E8563A",
+  accent: "#bb2b2b",
   accentSoft: "#FDF1EE",
   accentMid: "#F4896B",
   navy: "#1E2A3A",
@@ -211,7 +211,7 @@ export default function ChitranshCreation() {
             <button onClick={() => setMenuOpen(o => !o)} style={{ background: "none", border: "none", cursor: "pointer", padding: 8, display: "flex", flexDirection: "column", gap: 5 }}>
               {menuOpen
                 ? [0, 1].map(i => <span key={i} style={{ display: "block", width: 22, height: 2, background: T.navy, borderRadius: 2, transform: i === 0 ? "rotate(45deg) translate(5px,5px)" : "rotate(-45deg) translate(5px,-5px)", transition: "transform 0.25s" }} />)
-                : [0, 1, 2].map(i => <span key={i} style={{ display: "block", width: 22, height: 2, background: scrolled ? T.navy : "#fff", borderRadius: 2 }} />)
+                : [0, 1, 2].map(i => <span key={i} style={{ display: "block", width: 22, height: 2, background: scrolled ? T.navy : "#bb2b2b", borderRadius: 2 }} />)
               }
             </button>
           )}
