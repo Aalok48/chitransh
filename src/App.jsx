@@ -25,7 +25,7 @@ const T = {
   blue: "#4A9EDD",
 };
 
-const NAV_LINKS = ["About", "Services", "Projects", "Team", "Contact"];
+const NAV_LINKS = ["About", "Services", "Projects", "Team", "Career", "Gallery", "Contact"];
 
 const SERVICES = [
   { icon: "🎬", title: "Audio-Visual Services", desc: "Film production, animation, motion graphics, and digital content crafted to communicate clearly, engage audiences, and strengthen brand impact.", items: ["Advertisement & TVC", "Video Documentary", "Music Videos", "Animated Video (2D/3D)", "Short Videos", "Radio/TV PSAs", "Wedding & Event Coverage"] },
@@ -39,7 +39,7 @@ const PROJECTS = [
   { client: "Agile Solution", logo: clientlogo.agile, sub: "Microsoft Partner in Nepal", type: "Event Coverage", desc: "Comprehensive video and photo coverage for AGIL Solution 2025 — capturing key moments, speaker highlights, and authentic interactions.", url: "https://www.linkedin.com/posts/agileerp_businesscentral-microsoftdynamics365-agilesolutions-activity-7318538156323000320-4721", tag: "Corporate" },
   { client: "Swaraj Tractor", logo: clientlogo.swaraj, sub: "Customer Testimonials", type: "Testimonial Videos", desc: "Four authentic testimonial videos showcasing real customer experiences with Swaraj Tractor across Nepal in 2025.", url: "https://www.facebook.com/reel/1702587773974869", tag: "Brand Film" },
   { client: "Delight Hospitality", logo: clientlogo.delight, sub: "Hotel & Hospitality Promotion", type: "Promotional Video", desc: "Created a visually engaging promotional video highlighting Delight Hospitality's accommodations, services, and customer-centric approach, helping strengthen its brand presence and market reach.", url: "https://delightshospitality.com", tag: "Brand Film" },
-  { client: "Shree Tarapunja English School", logo: clientlogo.shreetarapunja, sub: "Educational Institution Showcase", type: "School Promotional Video", desc: "Produced a professional promotional video highlighting Shree Tarapunja English School's academic environment, student achievements, educational facilities, and commitment to quality learning.", url: "https://www.facebook.com/share/v/1H8d4zcrC7/", tag: "Corporate" }, 
+  { client: "Shree Tarapunja English School", logo: clientlogo.shreetarapunja, sub: "Educational Institution Showcase", type: "School Promotional Video", desc: "Produced a professional promotional video highlighting Shree Tarapunja English School's academic environment, student achievements, educational facilities, and commitment to quality learning.", url: "https://www.facebook.com/share/v/1H8d4zcrC7/", tag: "Corporate" },
   { client: "Huawei Nepal", logo: clientlogo.huawei, sub: "Digital Education", type: "Documentary", desc: "A refined video documentary elegantly showcasing the impact and transformative benefits of digital education.", url: "https://blog.huawei.com/en/post/2025/2/10/tech4good-huawei-nepal-digital-education", tag: "Documentary" },
   { client: "Model Multiple College", logo: clientlogo.model, sub: "Janakpur", type: "Audio Production", desc: "Produced an audiobook titled \"Khushi\" — the inspiring biography of Birendra Sah Sir, brought to life through expressive narration.", url: "https://www.youtube.com/watch?v=2lL8m98hjvk", tag: "Audiobook" },
   { client: "\"Khushi\" Short Movie", logo: clientlogo.khushi, sub: "NIFF 2025 Selection", type: "Narrative Film", desc: "Produced the acclaimed short film \"Khushi,\" directed by Pradhumna Mishra and officially selected for NIFF 2025.", url: "https://youtu.be/ZDD5_Pw-Fn4", tag: "Narrative Film" },
@@ -59,6 +59,15 @@ const TEAM = [
   { name: "Dipesh Shrestha", role: "Graphic Designer", image: team.dipesh },
   { name: "Matrika Subedi", role: "Consultant", image: team.matrika },
   { name: "Srabina Dhungana", role: "Content Creator", image: team.srabina },
+];
+
+const GALLERY = [
+  { title: "Project Showcase 1", description: "Compelling visual storytelling capturing the essence of brand innovation and creative excellence in every frame." },
+  { title: "Project Showcase 2", description: "Dynamic cinematography that brings concepts to life with precision, artistry, and technical mastery." },
+  { title: "Project Showcase 3", description: "Innovative production design creating memorable visual experiences that resonate with audiences globally." },
+  { title: "Project Showcase 4", description: "Professional execution showcasing our commitment to quality, creativity, and exceptional visual narratives." },
+  { title: "Project Showcase 5", description: "Artistic direction combining technical expertise with creative vision to deliver impactful visual content." },
+  { title: "Project Showcase 6", description: "Strategic visual communication that elevates brands through compelling storytelling and production excellence." },
 ];
 
 const TAG_COLORS = {
@@ -250,7 +259,7 @@ export default function ChitranshCreation() {
           loop
           playsInline
           preload="auto"
-          poster= {video.videoposter}
+          poster={video.videoposter}
           style={{
             position: "absolute",
             top: 0,
@@ -280,9 +289,6 @@ export default function ChitranshCreation() {
             Fuelling Brands <br />
             <span style={{ color: "#fff" }}>Through Film</span>
           </h1>
-          {/* <p style={{ color: "rgba(255,255,255,0.45)", fontSize: isMobile ? 11 : 13, letterSpacing: 5, textTransform: "uppercase", marginBottom: 28 }}>
-            Fuelling Brands Through Film
-          </p> */}
           <p style={{ color: "rgba(255,255,255,0.65)", fontSize: isMobile ? 15 : 18, maxWidth: 560, margin: "0 auto 44px", lineHeight: 1.75, fontWeight: 300 }}>
             We transform ideas into compelling audio-visual experiences that inspire, connect, and elevate brands — with storytelling at the heart of everything we do.
           </p>
@@ -468,6 +474,23 @@ export default function ChitranshCreation() {
         </div>
       </section>
 
+      {/* ══ CAREER ═══════════════════════════════════════════════════════════ */}
+      <section ref={el => sectionsRef.current["Career"] = el} style={{ padding: sp, background: T.bgAlt, width: "100%", boxSizing: "border-box" }}>
+        <div style={{ textAlign: "center", marginBottom: isMobile ? 40 : 60 }}>
+          <p style={{ color: T.accent, fontSize: 11, letterSpacing: 5, fontWeight: 700, textTransform: "uppercase", marginBottom: 12 }}>Join Us</p>
+          <h2 style={{ fontSize: isMobile ? 28 : 40, fontWeight: 800, letterSpacing: -0.5, marginBottom: 16, color: T.navy }}>Build Your Career With Us</h2>
+          <div style={{ width: 48, height: 3, background: T.accent, borderRadius: 2, margin: "0 auto" }} />
+        </div>
+        <div style={{ maxWidth: 620, margin: "0 auto", textAlign: "center" }}>
+          <p style={{ fontSize: 15, lineHeight: 1.9, color: T.slate, marginBottom: 32 }}>
+            We're always looking for talented individuals passionate about creative storytelling and digital innovation. Join our dynamic team and help us create compelling visual experiences that inspire audiences worldwide.
+          </p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQTFWTbrNMrDMK5U_oSG8sucnpMm5qy07jRD71Gnd8FjT6GA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" style={{ background: T.accent, color: "#fff", border: "none", padding: isMobile ? "13px 28px" : "15px 36px", fontSize: 14, fontWeight: 700, borderRadius: 8, cursor: "pointer", letterSpacing: 0.5, boxShadow: "0 8px 24px rgba(232,86,58,0.35)", textDecoration: "none", display: "inline-block", transition: "opacity 0.2s" }} onMouseEnter={e => e.currentTarget.style.opacity = "0.9"} onMouseLeave={e => e.currentTarget.style.opacity = "1"}>
+            Apply Now →
+          </a>
+        </div>
+      </section>
+
       {/* ══ TEAM ═════════════════════════════════════════════════════════════ */}
       <section ref={el => sectionsRef.current["Team"] = el} style={{ padding: sp, background: T.bgAlt, width: "100%", boxSizing: "border-box" }}>
         <div style={{ textAlign: "center", marginBottom: isMobile ? 40 : 60 }}>
@@ -498,6 +521,38 @@ export default function ChitranshCreation() {
         </div>
       </section>
 
+      {/* ══ GALLERY ══════════════════════════════════════════════════════════ */}
+      <section ref={el => sectionsRef.current["Gallery"] = el} style={{ padding: sp, background: T.bg, width: "100%", boxSizing: "border-box" }}>
+        <div style={{ textAlign: "center", marginBottom: isMobile ? 40 : 60 }}>
+          <p style={{ color: T.accent, fontSize: 11, letterSpacing: 5, fontWeight: 700, textTransform: "uppercase", marginBottom: 12 }}>Portfolio Gallery</p>
+          <h2 style={{ fontSize: isMobile ? 28 : 40, fontWeight: 800, letterSpacing: -0.5, color: T.navy, marginBottom: 16 }}>Our Creative Work</h2>
+          <div style={{ width: 48, height: 3, background: T.accent, borderRadius: 2, margin: "0 auto" }} />
+        </div>
+        <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : isTablet ? "1fr 1fr" : "repeat(3, 1fr)", gap: 24 }}>
+          {GALLERY.map((g, i) => (
+            <div key={i} style={{
+              background: T.bgCard,
+              borderRadius: 14,
+              overflow: "hidden",
+              border: `1px solid ${T.borderCard}`,
+              boxShadow: "0 2px 12px rgba(30,42,58,0.05)",
+              transition: "transform 0.2s, box-shadow 0.2s",
+            }}
+            onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.boxShadow = "0 12px 32px rgba(30,42,58,0.12)"; }}
+            onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 2px 12px rgba(30,42,58,0.05)"; }}
+            >
+              <div style={{ height: isMobile ? 200 : 240, background: "linear-gradient(135deg, #E8E2D9 0%, #D4CCBF 100%)", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
+                <div style={{ fontSize: 48, color: "rgba(30,42,58,0.2)" }}>🖼️</div>
+              </div>
+              <div style={{ padding: "20px" }}>
+                <h3 style={{ fontSize: 16, fontWeight: 700, color: T.navy, marginBottom: 10 }}>{g.title}</h3>
+                <p style={{ fontSize: 13, color: T.slate, lineHeight: 1.6, margin: 0 }}>{g.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* ══ CONTACT ══════════════════════════════════════════════════════════ */}
       <section ref={el => sectionsRef.current["Contact"] = el} style={{ background: T.bgDark, padding: sp, width: "100%", boxSizing: "border-box" }}>
         <div style={{ display: "grid", gridTemplateColumns: isDesktop ? "1fr 1fr" : "1fr", gap: isDesktop ? 80 : 52, alignItems: "start" }}>
@@ -516,7 +571,7 @@ export default function ChitranshCreation() {
               {/* Phone */}
               <div style={{ display: "flex", alignItems: "flex-start", gap: 14 }}>
                 <div style={{ width: 40, height: 40, background: "rgba(232,86,58,0.15)", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                  <img src= {icon.phone} alt="Phone" style={{ width: 20, height: 20, objectFit: "contain" }} />
+                  <img src={icon.phone} alt="Phone" style={{ width: 20, height: 20, objectFit: "contain" }} />
                 </div>
                 <div>
                   <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
@@ -537,7 +592,7 @@ export default function ChitranshCreation() {
               {/* Email */}
               <div style={{ display: "flex", alignItems: "flex-start", gap: 14, marginTop: 14 }}>
                 <div style={{ width: 40, height: 40, background: "rgba(232,86,58,0.15)", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                  <img src= {icon.mail} alt="Email" style={{ width: 20, height: 20, objectFit: "contain" }} />
+                  <img src={icon.mail} alt="Email" style={{ width: 20, height: 20, objectFit: "contain" }} />
                 </div>
                 <div>
                   <a href="mailto:creationchitransh8@gmail.com" style={{ color: "rgba(255,255,255,0.8)", fontSize: 14, textDecoration: "none", transition: "color 0.2s" }}
@@ -550,7 +605,7 @@ export default function ChitranshCreation() {
               {/* Address */}
               <div style={{ display: "flex", alignItems: "flex-start", gap: 14, marginTop: 14 }}>
                 <div style={{ width: 40, height: 40, background: "rgba(232,86,58,0.15)", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                  <img src= {icon.location} alt="Location" style={{ width: 20, height: 20, objectFit: "contain" }} />
+                  <img src={icon.location} alt="Location" style={{ width: 20, height: 20, objectFit: "contain" }} />
                 </div>
                 <div>
                   <a href="https://www.google.com/maps/search/27.69973650865905,85.3450369427827" target="_blank" rel="noopener noreferrer" style={{ color: "rgba(255,255,255,0.8)", fontSize: 14, textDecoration: "none", lineHeight: 1.7, transition: "color 0.2s" }}
