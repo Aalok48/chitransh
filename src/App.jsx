@@ -474,23 +474,7 @@ export default function ChitranshCreation() {
         </div>
       </section>
 
-      {/* ══ CAREER ═══════════════════════════════════════════════════════════ */}
-      <section ref={el => sectionsRef.current["Career"] = el} style={{ padding: sp, background: T.bgAlt, width: "100%", boxSizing: "border-box" }}>
-        <div style={{ textAlign: "center", marginBottom: isMobile ? 40 : 60 }}>
-          <p style={{ color: T.accent, fontSize: 11, letterSpacing: 5, fontWeight: 700, textTransform: "uppercase", marginBottom: 12 }}>Join Us</p>
-          <h2 style={{ fontSize: isMobile ? 28 : 40, fontWeight: 800, letterSpacing: -0.5, marginBottom: 16, color: T.navy }}>Build Your Career With Us</h2>
-          <div style={{ width: 48, height: 3, background: T.accent, borderRadius: 2, margin: "0 auto" }} />
-        </div>
-        <div style={{ maxWidth: 620, margin: "0 auto", textAlign: "center" }}>
-          <p style={{ fontSize: 15, lineHeight: 1.9, color: T.slate, marginBottom: 32 }}>
-            We're always looking for talented individuals passionate about creative storytelling and digital innovation. Join our dynamic team and help us create compelling visual experiences that inspire audiences worldwide.
-          </p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQTFWTbrNMrDMK5U_oSG8sucnpMm5qy07jRD71Gnd8FjT6GA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" style={{ background: T.accent, color: "#fff", border: "none", padding: isMobile ? "13px 28px" : "15px 36px", fontSize: 14, fontWeight: 700, borderRadius: 8, cursor: "pointer", letterSpacing: 0.5, boxShadow: "0 8px 24px rgba(232,86,58,0.35)", textDecoration: "none", display: "inline-block", transition: "opacity 0.2s" }} onMouseEnter={e => e.currentTarget.style.opacity = "0.9"} onMouseLeave={e => e.currentTarget.style.opacity = "1"}>
-            Apply Now →
-          </a>
-        </div>
-      </section>
-
+      
       {/* ══ TEAM ═════════════════════════════════════════════════════════════ */}
       <section ref={el => sectionsRef.current["Team"] = el} style={{ padding: sp, background: T.bgAlt, width: "100%", boxSizing: "border-box" }}>
         <div style={{ textAlign: "center", marginBottom: isMobile ? 40 : 60 }}>
@@ -518,6 +502,22 @@ export default function ChitranshCreation() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section ref={el => sectionsRef.current["Career"] = el} style={{ padding: sp, background: "#00253d", width: "100%", boxSizing: "border-box" }}>
+        <div style={{ textAlign: "center", marginBottom: isMobile ? 40 : 60 }}>
+          <p style={{ color: T.accent, fontSize: 11, letterSpacing: 5, fontWeight: 700, textTransform: "uppercase", marginBottom: 12 }}>Join Us</p>
+          <h2 style={{ fontSize: isMobile ? 28 : 40, fontWeight: 800, letterSpacing: -0.5, marginBottom: 16, color: T.bgAlt }}>Build Your Career With Us</h2>
+          <div style={{ width: 48, height: 3, background: T.accent, borderRadius: 2, margin: "0 auto" }} />
+        </div>
+        <div style={{ maxWidth: 620, margin: "0 auto", textAlign: "center" }}>
+          <p style={{ fontSize: 15, lineHeight: 1.9, color: T.slate, marginBottom: 32 }}>
+            We're always looking for talented individuals passionate about creative storytelling and digital innovation. Join our dynamic team and help us create compelling visual experiences that inspire audiences worldwide.
+          </p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQTFWTbrNMrDMK5U_oSG8sucnpMm5qy07jRD71Gnd8FjT6GA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" style={{ background: T.accent, color: "#fff", border: "none", padding: isMobile ? "13px 28px" : "15px 36px", fontSize: 14, fontWeight: 700, borderRadius: 8, cursor: "pointer", letterSpacing: 0.5, boxShadow: "0 8px 24px rgba(232,86,58,0.35)", textDecoration: "none", display: "inline-block", transition: "opacity 0.2s" }} onMouseEnter={e => e.currentTarget.style.opacity = "0.9"} onMouseLeave={e => e.currentTarget.style.opacity = "1"}>
+            Apply Now →
+          </a>
         </div>
       </section>
 
